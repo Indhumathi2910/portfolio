@@ -1,338 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indhumathi | Portfolio</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700|Poppins:300,400,600,700" rel="stylesheet">
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-  <!-- Vendor CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <title>Portfolio website complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Indhumathi Namchivayam</a>
+                </div>
 
-  <style>
-    body {
-      font-family: "Open Sans", sans-serif;
-      background: #f5f8fd;
-      color: #272829;
-    }
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-    /* Navbar */
-    #header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 70px;
-      background: rgba(0, 0, 0, 0.9);
-      z-index: 999;
-      transition: all 0.5s;
-    }
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-    #header .navbar-nav .nav-link {
-      color: #fff;
-      text-transform: uppercase;
-      margin-left: 20px;
-      transition: 0.3s;
-    }
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Indhumathi</span><br> Web Developer</h1>
 
-    #header .navbar-nav .nav-link:hover,
-    #header .navbar-nav .nav-link.active {
-      color: #18d26e;
-    }
+                    <a href="#" class="button">Contact</a>
+                </div>
 
-    /* Hero Section */
-    #hero {
-      width: 100%;
-      height: 100vh;
-      background: url("title.jpg") top center;
-      background-size: cover;
-      position: relative;
-    }
+                <div class="home__social">
+                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
 
-    #hero::before {
-      content: "";
-      background: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      inset: 0;
-    }
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
 
-    #hero .hero-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
-    }
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
 
-    #hero h1 {
-      font-size: 56px;
-      font-weight: 700;
-    }
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Indhumathi</h2>
+                        <p class="about__text">I am a web developer in html css and javascript experities </p>           
+                    </div>                                   
+                </div>
+            </section>
 
-    #hero p {
-      font-size: 26px;
-      margin-top: 15px;
-      color: #ddd;
-    }
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
 
-    /* Section styles */
-    section {
-      padding: 80px 0;
-    }
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
 
-    .section-title h2 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #173b6c;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 20px;
-      position: relative;
-    }
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">65%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-paint skills__icon'></i>
+                                <span class="skills__name">UX/UI</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="ind.jpeg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
 
-    /* About */
-    #about img {
-      border-radius: 15px;
-      width: 100%;
-    }
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
 
-    /* Skills */
-    .skills .progress {
-      height: 25px;
-      background: #e9ecef;
-      border-radius: 30px;
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
+                <div class="work__container bd-grid">
+                    <a href="" class="work__img">
+                        <img src="assets/img/work1.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work2.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work3.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work4.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work5.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work6.jpg" alt="">
+                    </a>
+                </div>
+            </section>
 
-    .skills .progress-bar {
-      background-color: #18d26e;
-      height: 100%;
-      text-align: right;
-      padding-right: 10px;
-      color: #fff;
-      font-weight: bold;
-      transition: width 1.2s ease;
-    }
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
 
-    /* Portfolio */
-    .portfolio .card {
-      border: none;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: 0.4s;
-    }
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Enviar" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
 
-    .portfolio .card:hover {
-      transform: translateY(-8px);
-    }
-
-    /* Contact */
-    #contact .form-control {
-      border-radius: 10px;
-    }
-
-    /* Footer */
-    #footer {
-      background: #040b14;
-      color: #fff;
-      text-align: center;
-      padding: 30px 0;
-    }
-
-    .social-links a {
-      color: #fff;
-      font-size: 24px;
-      margin: 0 10px;
-      transition: color 0.3s;
-    }
-
-    .social-links a:hover {
-      color: #18d26e;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#hero">Indhumathi</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li><a class="nav-link active" href="#hero">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#skills">Skills</a></li>
-            <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section id="hero">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Indhumathi</h1>
-      <p>I'm a <span class="typed" data-typed-items="Frontend Developer, Salesforce Enthusiast, UI Designer"></span></p>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>About Me</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <img src="ind.jpeg" alt="Profile" class="img-fluid">
-        </div>
-        <div class="col-lg-8 pt-4">
-          <h3>Frontend Developer & Salesforce Enthusiast</h3>
-          <p class="fst-italic">
-            Passionate about creating interactive and visually appealing web experiences that enhance usability and design.
-          </p>
-          <ul>
-            <li><strong>Email:</strong> indhumathioct29@gmail.com</li>
-            <li><strong>City:</strong> Chennai, India</li>
-            <li><strong>Degree:</strong> B.E Electronics and Communication</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="skills">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>Skills</h2>
-      </div>
-
-      <div class="row skills-content">
-        <div class="col-lg-6">
-          <div class="progress">
-            <div class="progress-bar" style="width: 95%;">HTML - 95%</div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" style="width: 90%;">CSS - 90%</div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" style="width: 80%;">JavaScript - 80%</div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="progress">
-            <div class="progress-bar" style="width: 85%;">Python - 85%</div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" style="width: 75%;">Salesforce - 75%</div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" style="width: 70%;">SQL - 70%</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio" class="portfolio">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>Portfolio</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="you.png" class="card-img-top">
-            <div class="card-body text-center">
-              <h5>YouTube Clone</h5>
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Marlon</p>
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="quiz.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h5>Quiz App</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card">
-            <img src="liberary.jpg" class="card-img-top">
-            <div class="card-body text-center">
-              <h5>Library Management</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+        </footer>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <iframe src="https://www.google.com/maps?q=Chennai&output=embed" width="100%" height="350" style="border:0;" allowfullscreen=""></iframe>
-        </div>
-        <div class="col-lg-6">
-          <form action="https://formspree.io/f/mjkvyeov" method="POST">
-            <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
-            <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
-            <textarea name="message" class="form-control mb-3" rows="5" placeholder="Your Message" required></textarea>
-            <button class="btn btn-success w-100">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="container">
-      <div class="social-links">
-        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <p class="mt-3">© 2025 Indhumathi. All Rights Reserved.</p>
-    </div>
-  </footer>
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-  <!-- JS Files -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    const typed = new Typed('.typed', {
-      strings: document.querySelector('.typed').getAttribute('data-typed-items').split(','),
-      typeSpeed: 80,
-      backSpeed: 50,
-      backDelay: 2000,
-      loop: true
-    });
-  </script>
-</body>
-
-</html>
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</htm
